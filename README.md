@@ -1,6 +1,6 @@
 # BBOpenstruct
 
-This gem contains BbOpenStruct class - reimplementation of OpenStruct that uses binding to store your data internally. Why? For science. You monster.
+This gem contains BBOpenStruct (Binding-based openstruct) class - reimplementation of OpenStruct that uses binding to store your data internally. Why? For science. You monster.
 
 Test file is actually taken from original openstruct implementation, so API is nearly identical.
 
@@ -19,6 +19,17 @@ And then execute:
 Or install it yourself as:
 
     $ gem install bb_openstruct
+
+## Usage
+
+Use it like your normal OpenStruct:
+
+    require 'bb_openstruct'
+    bb = BBOpenStruct.new(a: 1)
+    bb.a # => 1
+    bb[:a] # => 1
+    bb.new_var = 20
+    bb.new_var # => 20
 
 ## Should I use it on production
 
